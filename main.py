@@ -30,7 +30,7 @@ while True:
         # opcion 2
         elif operacion == 2:
             pass
-    
+
     # opcion 2
     elif operacion == 2:
         # imprimimos todos los equipos 
@@ -77,7 +77,9 @@ while True:
 
     # opcion 4
     elif operacion == 4:
-        pass
+        # imprimimos el calendario de la F1
+        # llamamos a la funcion cal
+        print(cal(calendario))
     
     # opcion 5
     elif operacion == 5:

@@ -1,19 +1,48 @@
 # importamos text para imprimir los datos de forma mas ordenada
 from cgitb import text
 
+# importamos las clases 
+from entidades import * 
+
 # diccionario con todos los equipos y sus pilotos
 equipos_pilotos = { 
-                'FERRARI':'CARLOS SAINZ''CHARLES LECRECR', 
-                'RED BULL':'MAX VERSTAPPEN''SERGIO PEREZ', 
-                'MERCEDES': 'LEWIS HAMILTON''JORGE RUSSEL',
-                'MCLARES': 'LANDO NORRIS''DANIEL RICCIARDO',
-                'WILLIAMS': 'ALEX ALBON''NICOLAS LATIFI',
-                'HAAS': 'MICK SCHUMACHER''KEVIN MAGNUSSEN',
-                'ALPINE': 'FERNANDO ALONSO''ESTEBAN OCON',
-                'ALPHA TAURI': 'PIERRE GASLY''YUKI TSUNODA', 
-                'ALFA ROMEO': 'VALTERI BOTTAS''GUANYU SHOU',
-                'ASTON MARTIN': 'SEBASTIAN VETTEL''LANCE STROLL'
-                }
+    'FERRARI':'CARLOS SAINZ''CHARLES LECRECR', 
+    'RED BULL':'MAX VERSTAPPEN''SERGIO PEREZ', 
+    'MERCEDES': 'LEWIS HAMILTON''JORGE RUSSEL',
+    'MCLARES': 'LANDO NORRIS''DANIEL RICCIARDO',
+    'WILLIAMS': 'ALEX ALBON''NICOLAS LATIFI',
+    'HAAS': 'MICK SCHUMACHER''KEVIN MAGNUSSEN',
+    'ALPINE': 'FERNANDO ALONSO''ESTEBAN OCON',
+    'ALPHA TAURI': 'PIERRE GASLY''YUKI TSUNODA', 
+    'ALFA ROMEO': 'VALTERI BOTTAS''GUANYU SHOU',
+    'ASTON MARTIN': 'SEBASTIAN VETTEL''LANCE STROLL'
+}
+
+# diccionario con el calendario de la F1
+calendario = {
+    'BAHRAIN': '20/03/2022''12:00 AM',
+    'JEDDAH': '27/03/2022''14:00 PM',
+    'ALBERT PARK': '10/04/2022''02:00 AM',
+    'IMOLA': '24/04/2022''10:00 AM',
+    'MIAMI': '08/05/2022''16:30 PM',
+    'CATALUÑA': '22/05/2022''10:00 AM',
+    'MONACO': '29/05/2022''10:00 AM',
+    'BAKU': '12/06/2022''08:00 AM',
+    'VILLENEUVE': '19/06/2022''15:00 PM',
+    'SILVERTONE': '03/07/2022''11:00 AM',
+    'RED BULL RING': '10/07/2022''10:00 AM',
+    'PAUL RICARD': '24/07/2022''10:00 AM',
+    'HUNGARORING': '31/07/2022''10:00 AM',
+    'SPA FRANCORCHAMPS': '28/08/2022''10:00 AM',
+    'ZANDVOORT': '04/09/2022''10:00 AM',
+    'MONZA': '11/09/2022''10:00 AM',
+    'MARINA BAY': '02/10/2022''09:00 AM',
+    'SAZUKA': '09/10/2022''02:00 AM',
+    'THE AMERICAS': '23/10/2022''16:00 PM',
+    'HERMANOS RODRIGUEZ': '30/10/2022''15:00 PM',
+    'JORGE CARLOS PACE': '13/11/2022''15:00 PM',
+    'YAS MARINA': '20/11/2022''10:00 AM'
+}
 
 # lista con todos los pilotos 
 pilotos = [
@@ -37,47 +66,47 @@ pilotos = [
     'GUANYU SHOU',
     'SEBASTIAN VETTEL',
     'LANCE STROLL'
-    ]
+]
 
 # lista con todos los equipos 
 equipos = [
-    'FERRARI',
-    'RED BULL',
-    'MERCEDES',
-    'MCLAREN',
-    'WILLIAMS',
-    'HAAS',
-    'ALPINE',
-    'ALPHA TAURI',
-    'ALFA ROMEO',
-    'ASTON MARTIN'
-    ]
+    Equipo('FERRARI', '', '', ''),
+    Equipo('RED BULL', '', '', ''),
+    Equipo('MERCEDES', '', '', ''),
+    Equipo('MCLAREN', '', '', ''),
+    Equipo('WILLIAMS', '', '', ''),
+    Equipo('HAAS', '', '', ''),
+    Equipo('ALPINE', '', '', ''),
+    Equipo('ALPHA TAURI', '', '', ''),
+    Equipo('ALFA ROMEO', '', '', ''),
+    Equipo('ASTON MARTIN', '', '', '')
+]
 
 # lista con todos los circuitos
 circuitos = [
-    'BAHRAIN'
-    'JEDDAH',
-    'ALBERT PARK',
-    'IMOLA',
-    'MIAMI',
-    'CATALUÑA',
-    'MONACO',
-    'BAKU',
-    'VILLENEUVE',
-    'SILVERTONE',
-    'RED BULL RING',
-    'PAUL RICARD',
-    'HUNGARORING',
-    'SPA FRANCORCHAMPS',
-    'ZANDVOORT',
-    'MONZA',
-    'MARINA BAY',
-    'SAZUKA',
-    'THE AMERICAS',
-    'HERMANOS RODRIGUEZ',
-    'JORGE CARLOS PACE',
-    'YAS MARINA'
-    ]
+    Circuito('BAHRAIN', '', ''),
+    Circuito('JEDDAH', '', ''),
+    Circuito('ALBERT PARK', '', ''),
+    Circuito('IMOLA', '', ''),
+    Circuito('MIAMI', '', ''),
+    Circuito('CATALUÑA', '', ''),
+    Circuito('MONACO', 'hola', ''),
+    Circuito('BAKU', '', ''),
+    Circuito('VILLENEUVE', '', ''),
+    Circuito('SILVERTONE', '', ''),
+    Circuito('RED BULL RING', '', ''),
+    Circuito('PAUL RICARD', '', ''),
+    Circuito('HUNGARORING', '', ''),
+    Circuito('SPA FRANCORCHAMPS', '', ''),
+    Circuito('ZANDVOORT', '', ''),
+    Circuito('MONZA', '', ''),
+    Circuito('MARINA BAY', '', ''),
+    Circuito('SAZUKA', '', ''),
+    Circuito('THE AMERICAS', '', ''),
+    Circuito('HERMANOS RODRIGUEZ', '', ''),
+    Circuito('JORGE CARLOS PACE', '', ''),
+    Circuito('YAS MARINA', '', '')
+]
 
 # funcion menu
 def menu ():
@@ -108,7 +137,7 @@ def cir(circuitos):
     # imprimimos todos los circuitos de manera prolija usando text
     texto = ''
     for circuito in circuitos:
-        texto += str(circuito) + '\n'
+        texto += str(circuito.nombre) + '\n'
     return texto
 
 # funcion equ (equipos)
@@ -116,7 +145,7 @@ def equ (equipos):
     # imprimimos todos los equipos de manera prolija usando text
     texto = ''
     for equipo in equipos:
-        texto += str(equipo) + '\n'
+        texto += str(equipo.nombre) + '\n'
     return texto
 
 # funcion pil (pilotos)
@@ -128,8 +157,12 @@ def pil (pilotos):
     return texto
 
 # funcion cal (calendario)
-def cal ():
-    pass
+def cal (calendario):
+    # imprimos el calendario de la F1 de manera prolija usando text
+    texto = ''
+    for carrera in calendario:
+        texto += str(carrera) + '\n'
+    return texto
 
 # funcion mi_equipo
 def mi_equipo ():
