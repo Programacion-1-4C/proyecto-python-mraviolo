@@ -18,15 +18,14 @@ while True:
         print(cir(circuitos))
         # opciones de circuitos
         print(
-            '1) ver imagen del circuito\n'
-            '2) ver infomacion del circuito\n'
-            '3) volver'
+            '1) ver descripcion\n'
+            '2) volver'
         )
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
         # opcion 1
         if operacion == 1:
-            pass
+            print(cir2(circuitos))
         # opcion 2
         elif operacion == 2:
             pass
@@ -38,20 +37,21 @@ while True:
         print(equ(equipos))
         # opciones de equipos
         print(
-            '1) ver historia de la escuderia\n'
-            '2) ver los pilotos que pertenecen a la escuderia\n'
+            '1) historia de los equipos\n'
+            '2) pilotos del equipo\n'
             '3) volver'
         )
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
         # opcion 1
         if operacion == 1:
-            pass
+            print(equ2(equipos))
         # opcion 2
         elif operacion == 2:
-            # imprimimos los equipos con sus respectivos pilotos
-            # llamamos la funcion pil_equ
-            print(pil_equ(equipos_pilotos))
+            print(equ3(equipos))
+        # opcion 3
+        elif operacion == 3:
+            pass
 
     # opcion 3
     elif operacion == 3:
@@ -68,12 +68,13 @@ while True:
         operacion = int(input('>>> '))
         # opcion 1
         if operacion == 1:
-            pass
+            print(pil2(pilotos))
         # opcion 2
         elif operacion == 2:
-            # imprimimos los pilotos con sus respectivos equipos
-            # llamamos a la funcion pil_equ
-            print(pil_equ(equipos_pilotos))
+            print(pil3(pilotos))
+        # opcion 3
+        elif operacion == 3:
+            pass
 
     # opcion 4
     elif operacion == 4:
