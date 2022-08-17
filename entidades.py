@@ -18,6 +18,9 @@ class Equipo:
         self.ganados = ganados
         self.director = director
 
+    def __eq__(self, nombre):
+        return self.nombre == nombre
+
     def __str__ (self):
         return f'{self.nombre}:{self.pilotos}:{self.historia}:{self.ganados}:{self.director}'
 
@@ -30,6 +33,9 @@ class Piloto:
         self.equipo = equipo
         self.ganados = ganados
     
+    def __eq__(self, nombre):
+        return self.nombre == nombre
+        
     def __str__ (self):
         return f'{self.nombre}:{self.edad}:{self.equipo}:{self.ganados}'
 
