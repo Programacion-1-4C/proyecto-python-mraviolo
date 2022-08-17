@@ -37,9 +37,11 @@ while True:
         print(equ(equipos))
         # opciones de equipos
         print(
-            '1) historia de los equipos\n'
-            '2) pilotos del equipo\n'
-            '3) volver'
+            '1) ver historia de los equipos\n'
+            '2) ver pilotos del equipo\n'
+            '3) ver campeonatos ganados\n'
+            '4) ver director \n'
+            '5) volver'
         )
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
@@ -51,6 +53,12 @@ while True:
             print(equ3(equipos))
         # opcion 3
         elif operacion == 3:
+            print(equ4(equipos))
+        # opcion 4
+        elif operacion == 4:
+            print(equ5(equipos))
+        # opcion 5
+        elif operacion == 5:
             pass
 
     # opcion 3
@@ -62,7 +70,8 @@ while True:
         print(
             '1) ver informacion personal del piloto\n'
             '2) ver escuderias a las que pertenecen\n'
-            '3) volver'
+            '3) ver su estadisticas\n'
+            '4) volver'
         )
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
@@ -74,6 +83,9 @@ while True:
             print(pil3(pilotos))
         # opcion 3
         elif operacion == 3:
+            print(pil4(pilotos))
+        # opcion 4
+        elif operacion == 4:
             pass
 
     # opcion 4
