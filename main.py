@@ -1,15 +1,15 @@
 # importamos las funciones
 from funciones import *
+from tkinter import Tk
 
 # bucle infinito para ejecutar el programa
 while True:
-
     # llamamos a la funcion menu
     menu()
-
+ 
     # pedimos al user que quiere hacer
     operacion = int(input('>>> '))
-
+ 
     # analizamos la operacion
     # opcion 1
     if operacion == 1:
@@ -21,11 +21,14 @@ while True:
             '1) ver descripcion\n'
             '2) volver'
         )
+ 
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
+ 
         # opcion 1
         if operacion == 1:
             print(cir2(circuitos))
+ 
         # opcion 2
         elif operacion == 2:
             pass
@@ -43,20 +46,26 @@ while True:
             '4) ver director \n'
             '5) volver'
         )
+ 
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
+ 
         # opcion 1
         if operacion == 1:
             print(equ2(equipos))
+ 
         # opcion 2
         elif operacion == 2:
             print(equ3(equipos))
+ 
         # opcion 3
         elif operacion == 3:
             print(equ4(equipos))
+ 
         # opcion 4
         elif operacion == 4:
             print(equ5(equipos))
+ 
         # opcion 5
         elif operacion == 5:
             pass
@@ -73,17 +82,22 @@ while True:
             '3) ver su estadisticas\n'
             '4) volver'
         )
+ 
         # pedimos al user si quiere hacer alguna de esas operaciones
         operacion = int(input('>>> '))
+ 
         # opcion 1
         if operacion == 1:
             print(pil2(pilotos))
+ 
         # opcion 2
         elif operacion == 2:
             print(pil3(pilotos))
+ 
         # opcion 3
         elif operacion == 3:
             print(pil4(pilotos))
+ 
         # opcion 4
         elif operacion == 4:
             pass
