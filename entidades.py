@@ -38,7 +38,7 @@ class Piloto:
         self.imagen = imagen
     
     def __eq__(self, nombre):
-        return self.nombre == nombre  
+        return self.nombre == nombre   
 
     def __str__ (self):
         return f'{self.nombre}:{self.edad}:{self.equipo}:{self.ganados}.{self.puntaje}:{self.imagen}'

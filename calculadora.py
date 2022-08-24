@@ -2,7 +2,6 @@
 from tkinter import *
 from math import *
 
-
 # funcion para escribir el numero con los botones
 def escribir_botones(num):
     global operador
@@ -23,14 +22,13 @@ def operacion():
 
 # funcion para limpiar la pantalla
 def limpiar():
-    global operador 
+    global operador
     operador = ''
     input_text.set(operador)
 
 
 #creamos la ventana
 root = Tk()
-
 #configuracion de la calculadora
 root.title('calculadora')
 root.resizable(False,False)
