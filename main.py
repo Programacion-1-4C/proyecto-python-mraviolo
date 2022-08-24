@@ -110,7 +110,15 @@ while True:
     
     # opcion 5
     elif operacion == 5:
-        # imprimimos su equipo armado por el
+        # mensaje informativo
+        print('necesitamos que ingreses un equipo, piloto1 y piloto2')
+        print(
+            '-------------------------\n'
+            f'equipo: \n'
+            f'piloto1: \n'
+            f'piloto2: \n'
+            '-------------------------'
+        )
         # llamamos a la funcion mi_equipo
         print(mi_equipo())
 

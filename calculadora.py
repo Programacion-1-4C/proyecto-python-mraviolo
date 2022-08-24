@@ -8,7 +8,6 @@ def escribir_botones(num):
     operador = operador+str(num)
     input_text.set(operador)
 
-
 # funcion de operacion
 def operacion():
     global operador
@@ -19,16 +18,14 @@ def operacion():
         opera = 'ERROR'
     input_text.set(opera)
 
-
 # funcion para limpiar la pantalla
 def limpiar():
     global operador
     operador = ''
     input_text.set(operador)
 
-
 #creamos la ventana
-root = Tk()
+root = Tk()  
 #configuracion de la calculadora
 root.title('calculadora')
 root.resizable(False,False)

@@ -116,7 +116,7 @@ def mi_equipo ():
 
     piloto1 = buscar_elemento(pilotos, pil)
 
-    piloto2 = buscar_elemento(pilotos, pil)
+    piloto2 = buscar_elemento (pilotos, pil)
 
     # calculamos el porcentaje
     porcentaje = (piloto1.puntaje + piloto2.puntaje + equipo.puntaje) / 3
@@ -135,7 +135,7 @@ def buscar_elemento(elementos, fun):
     # bucle infinito hasta que se introduzca un equipo valido
     while True:
         # pedimos al user que equipo quiere usar
-        buscado = input('introduce tu equipo: ').upper()
+        buscado = input('>>> ').upper()
         # analizamos si existe ese equipo
         for elemento in elementos:
             if buscado == elemento:
