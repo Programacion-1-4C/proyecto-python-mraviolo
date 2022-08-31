@@ -1,3 +1,4 @@
+# mateo raviolo
 # clase Circuito
 class Circuito:
     def __init__ (self, nombre, longitud='', pais='', imagen=''):
@@ -36,6 +37,7 @@ class Piloto:
         self.ganados = ganados
         self.puntaje = puntaje
         self.imagen = imagen
+
     
     def __eq__(self, nombre):
         return self.nombre == nombre   

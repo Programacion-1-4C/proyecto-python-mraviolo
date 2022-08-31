@@ -1,3 +1,4 @@
+# mateo raviolo
 # importamos la libreria de tkinter (interfaz)
 from tkinter import *
 from math import *
