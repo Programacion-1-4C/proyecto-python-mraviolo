@@ -19,7 +19,10 @@ def menu ():
         '3) pilotos \n'
         '4) calendario \n'
         '5) mi equipo \n'
-        '6) salir'
+        '6) salir\n'
+        '-------------------------------------------------------------------------\n'
+        '-----------------------------MATEO RAVIOLO-------------------------------\n'
+        '-------------------------------------------------------------------------\n'
     )
 
 # funcion cir (circuitos)
@@ -114,11 +117,8 @@ def cal (calendario):
 # funcion mi_equipo
 def mi_equipo ():
     equipo = buscar_elemento(equipos, equ)
-
     piloto1 = buscar_elemento(pilotos, pil)
-
     piloto2 = buscar_elemento (pilotos, pil)
-
     # calculamos el porcentaje
     porcentaje = (piloto1.puntaje + piloto2.puntaje + equipo.puntaje) / 3
     # imprimimos toda la informacion
@@ -132,7 +132,7 @@ def mi_equipo ():
     )
 
 
-def buscar_elemento(elementos, fun):
+def buscar_elemento(elementos, funcion):
     # bucle infinito hasta que se introduzca un equipo valido
     while True:
         # pedimos al user que equipo quiere usar
@@ -149,52 +149,4 @@ def buscar_elemento(elementos, fun):
             print(f'incorrecto, la scuderia introducida {buscado} no exite')
             print('los equipos disponibles son: ')
             # mostramos la lista con fun
-            print(fun(elementos))
-        
-"""
-    # pedimos al user que piloto principal quiere usar
-    piloto1 = input('introduce el piloto principal: ')
-    # convertimos piloto1 a mayusculas para que no salga error al buscarlo en la lista
-    piloto1 = piloto1.upper()
-    # bucle infinito hasta que se introduzca un piloto valido
-    while True:
-        # analizamos si existe ese piloto
-        if piloto1 in pilotos:
-            # mensaje informativo indicando que se selecciono correctamente
-            print(f'perfecto, has seleccionado a {piloto1} como piloto principal')
-            # salimos del bucle
-            break
-        else:
-            # mensaje informativo indicando que no exite ese piloto
-            print(f'incorrecto, el piloto {piloto1} no exite')
-            print('los pilotos disponibles son: ')
-            # mostramos los pilotos disponibles
-            print(pil(pilotos))
-            # pedimos el piloto al user de vuelta
-            piloto1 = input('introduce el piloto principal: ')
-            # convertimos a mayusculas el piloto1
-            piloto1 = piloto1.upper()
-
-    # pedimos al user que piloto secundario quiere usar
-    piloto2 = input('introduce el piloto secundario: ')
-    # convertimos piloto2 a mayusculas para que no salga error al buscarlo en la lista
-    piloto2 = piloto2.upper()
-    # bucle infinito hasta que se introduzca un piloto valido
-    while True:
-        # analizamos si existe ese piloto
-        if piloto2 in pilotos:
-            # mensaje informativo indicando que se selecciono correctamente
-            print(f'perfecto, has seleccionado a {piloto2} como piloto principal')
-            # salimos del bucle
-            break
-        else:
-            # mensaje informativo indicando que no exite ese piloto
-            print(f'incorrecto, el piloto {piloto2} no exite')
-            print('los pilotos disponibles son: ')
-            # mostramos los pilotos disponibles
-            print(pil(pilotos))
-            # pedimos el piloto al user de vuelta
-            piloto2 = input('introduce el piloto principal: ')
-            # convertimos a mayusculas el piloto2
-            piloto2 = piloto2.upper()
-"""
+            print(funcion(elementos))

@@ -7,7 +7,7 @@ from tkinter import Tk
 while True:
     # llamamos a la funcion menu
     menu()
- 
+
     # pedimos al user que quiere hacer
     operacion = int(input('>>> '))
  
@@ -20,7 +20,8 @@ while True:
         # opciones de circuitos
         print(
             '1) ver descripcion\n'
-            '2) volver'
+            '2) ver imagen\n'
+            '3) volver\n'
         )
  
         # pedimos al user si quiere hacer alguna de esas operaciones
@@ -32,6 +33,10 @@ while True:
  
         # opcion 2
         elif operacion == 2:
+            print('no se ha cargado una imagen')
+
+        # opcion 3
+        elif operacion == 3:
             pass
 
     # opcion 2
@@ -45,7 +50,8 @@ while True:
             '2) ver pilotos del equipo\n'
             '3) ver campeonatos ganados\n'
             '4) ver director \n'
-            '5) volver'
+            '5) ver imagen\n'
+            '6) volver\n'
         )
  
         # pedimos al user si quiere hacer alguna de esas operaciones
@@ -69,7 +75,12 @@ while True:
  
         # opcion 5
         elif operacion == 5:
+            print('no se ha cargado una imagen')
+
+        # opcion 6
+        elif operacion == 6:
             pass
+            
 
     # opcion 3
     elif operacion == 3:
@@ -81,7 +92,8 @@ while True:
             '1) ver informacion personal del piloto\n'
             '2) ver escuderias a las que pertenecen\n'
             '3) ver su estadisticas\n'
-            '4) volver'
+            '4) ver imagen\n'
+            '5) volver\n'
         )
  
         # pedimos al user si quiere hacer alguna de esas operaciones
@@ -101,6 +113,10 @@ while True:
  
         # opcion 4
         elif operacion == 4:
+            print('no se ha cargado una imagen')
+
+        # opcion 5
+        elif operacion == 5:
             pass
 
     # opcion 4
